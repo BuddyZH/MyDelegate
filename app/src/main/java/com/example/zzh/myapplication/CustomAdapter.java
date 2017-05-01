@@ -46,12 +46,12 @@ public class CustomAdapter extends RecyclerView.Adapter<BaseViewHolder> {
 
 	@Override
 	public int getItemViewType(int position) {
-		if (position % 2 == 0) {
-			return Types.TYPE_ONE;
-		} else {
-			return Types.TYPE_TWO;
+		BaseItem baseItem = getItem(position);
+		if (baseItem != null) {
+			return baseItem.getType();
 		}
-	}
+		return 0;
+	 }
 
 	@Override
 	public int getItemCount() {
