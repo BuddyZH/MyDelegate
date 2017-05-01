@@ -1,6 +1,6 @@
 package com.example.zzh.myapplication;
 
-import android.support.v7.app.AppCompatActivity;
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -11,10 +11,10 @@ import com.example.zzh.myapplication.Item.ItemTwo;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
 
 	private RecyclerView mRecyclerview;
-	private ArrayList<BaseItem> mData;
+	private ArrayList<BaseItem> mData = new ArrayList<>();
 
 	@Override
 
